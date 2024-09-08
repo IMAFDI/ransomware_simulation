@@ -91,4 +91,4 @@ The key_finder.py script helps in finding the real private key:
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project in not been licensed under any License. You can are free to use and give your inputs.
