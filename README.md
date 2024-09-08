@@ -18,7 +18,7 @@ Install the required Python package using pip:
 
 ```bash
 pip install cryptography
-
+```
 Usage
 
 Encryption
