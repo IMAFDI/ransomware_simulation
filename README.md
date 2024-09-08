@@ -3,92 +3,125 @@
 
 This project demonstrates a basic ransomware simulation with encryption and decryption capabilities. The ransomware encrypts files using AES encryption and hides the AES key using RSA encryption. A ransom note is created with a hint to find the real AES key among several fake keys.
 
+---
+
+![Encryption Process](https://example.com/encryption_process.png)
+
 ## Project Structure
 
 - **`encryption.py`**: Encrypts files, generates RSA key pairs, and creates a ransom note.
 - **`decryption.py`**: Decrypts files using a private key and an AES key obtained from the ransom note.
 - **`key_finder.py`**: Finds the real private key by testing a set of fake keys.
 
+---
+
 ## Requirements
 
 - Python 3.7 or higher
 - `cryptography` library
 
-Install the required Python package using pip:
+To install the required dependencies, run the following command:
 
 ```bash
 pip install cryptography
 ```
+
+---
+
 ## Usage
 
 ### Encryption
 
-Generate RSA Key Pair and Encrypt Files:
-
-Run encryption.py to encrypt files in the dummy_files directory, create a ransom note, and save the private key for decryption.
+To generate RSA key pair and encrypt files, run `encryption.py`:
 
 ```bash
 python encryption.py
 ```
 
-Important Files Created:
-- `ransom_note.txt`: Contains a hint for finding the real AES key.
-- `good_luck_finding_the_key/`: Directory containing fake keys and one real key.
-- `private_key.pem`: Private RSA key used for decryption.
+This script will:
+
+- Encrypt files in the `dummy_files/` directory.
+- Create a ransom note with a hint.
+- Generate a directory `good_luck_finding_the_key/` containing the AES key along with fake keys.
+- Save the private RSA key in `private_key.pem`.
+
+---
 
 ### Decryption
 
-Find the Real Private Key:
+To find the real private key and decrypt files:
 
-Run key_finder.py to identify the real private key from the fake keys. You will need to provide the encrypted AES key from the ransom note.
+1. Run `key_finder.py` to identify the correct private key:
+   
+   ```bash
+   python key_finder.py
+   ```
 
-```bash
-python key_finder.py
-```
+2. Run `decryption.py` with the correct private key to decrypt the files:
 
-Decrypt Files:
+   ```bash
+   python decryption.py
+   ```
 
-After finding the real private key, run decryption.py to decrypt the files. You will need to provide the path to the private key file.
+   The decryption script will:
+   
+   - Decrypt the files in `dummy_files/`.
+   - Delete the `good_luck_finding_the_key/` folder and `ransom_note.txt`.
 
-```bash
-python decryption.py
-```
-
-Actions Performed:
-- Decrypts files in the dummy_files directory.
-- Deletes the `good_luck_finding_the_key/` folder and `ransom_note.txt` file after decryption.
+---
 
 ## Detailed Description
 
-### Encryption
+### Encryption Process
 
-The encryption.py script performs the following tasks:
-1. Generates RSA Key Pair: Creates a public and private key for encrypting and decrypting the AES key.
-2. Generates AES Key: Creates a random AES key used for file encryption.
-3. Encrypts Files: Encrypts files in the dummy_files directory using AES encryption with a randomly generated key.
-4. Encrypts AES Key: Encrypts the AES key using the RSA public key.
-5. Creates Ransom Note: Saves the encrypted AES key in a ransom note and places it in the root directory.
-6. Saves Private Key: Saves the RSA private key in private_key.pem for later decryption.
+The `encryption.py` script performs the following tasks:
 
-### Decryption
+1. **Generate RSA Key Pair**: Creates public and private RSA keys.
+2. **Generate AES Key**: Used for file encryption.
+3. **Encrypt Files**: Encrypts files in the `dummy_files/` directory using the AES key.
+4. **Encrypt AES Key**: The AES key is encrypted using the RSA public key.
+5. **Create Ransom Note**: A ransom note is generated with the encrypted AES key and placed in the root directory.
+6. **Save Private Key**: The RSA private key is saved in `private_key.pem`.
 
-The decryption.py script performs the following tasks:
-1. Loads Private Key: Loads the RSA private key from a provided file.
-2. Decrypts AES Key: Decrypts the AES key using the RSA private key.
-3. Decrypts Files: Decrypts files in the dummy_files directory using the decrypted AES key.
-4. Cleans Up: Deletes the `good_luck_finding_the_key/` folder and `ransom_note.txt` file.
+---
+
+### Decryption Process
+
+The `decryption.py` script decrypts the files using the following steps:
+
+1. **Load Private Key**: Loads the RSA private key.
+2. **Decrypt AES Key**: Decrypts the AES key using the private key.
+3. **Decrypt Files**: Decrypts files in the `dummy_files/` directory using the decrypted AES key.
+4. **Clean Up**: Removes the ransom note and the fake key folder.
+
+---
 
 ### Key Finder
 
-The key_finder.py script helps in finding the real private key:
-- Finds Real Private Key: Tests each fake key to find the real private key by attempting to decrypt the AES key from the ransom note.
+The `key_finder.py` script helps in finding the real private key among several fake keys by testing each key to find the correct one that can decrypt the AES key in the ransom note.
+
+---
+
+![Decryption Process](https://example.com/decryption_process.png)
+
+---
 
 ## Notes
 
-- Ensure that the `dummy_files` directory contains the files you want to encrypt.
-- Be cautious when running this simulation on important files, as it is designed to simulate ransomware behavior.
-- Adjust file paths and directory names in the scripts as necessary for your environment.
+- The `dummy_files/` directory should contain the files to be encrypted.
+- Be careful when running the simulation on important files.
+- Modify file paths and directories as necessary for your environment.
+
+---
 
 ## License
 
 This project in not been licensed under any License. You can are free to use and give your inputs.
+
+  
+---
+
+Feel free to contribute, suggest new features, or report issues. Happy Encrypting! 😊
+
+---
+
