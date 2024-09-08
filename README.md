@@ -19,9 +19,9 @@ Install the required Python package using pip:
 ```bash
 pip install cryptography
 ```
-Usage
+## Usage
 
-Encryption
+## Encryption
 
 Generate RSA Key Pair and Encrypt Files:
 
@@ -35,7 +35,7 @@ Important Files Created:
 	•	good_luck_finding_the_key/: Directory containing fake keys and one real key.
 	•	private_key.pem: Private RSA key used for decryption.
 
-Decryption
+## Decryption
 
 Find the Real Private Key:
 
@@ -56,7 +56,7 @@ Actions Performed:
 
 Detailed Description
 
-Encryption
+## Encryption
 
 The encryption.py script performs the following tasks:
 
@@ -67,7 +67,7 @@ The encryption.py script performs the following tasks:
 	5.	Creates Ransom Note: Saves the encrypted AES key in a ransom note and places it in the root directory.
 	6.	Saves Private Key: Saves the RSA private key in private_key.pem for later decryption.
 
-Decryption
+## Decryption
 
 The decryption.py script performs the following tasks:
 
@@ -76,7 +76,7 @@ The decryption.py script performs the following tasks:
 	3.	Decrypts Files: Decrypts files in the dummy_files directory using the decrypted AES key.
 	4.	Cleans Up: Deletes the good_luck_finding_the_key/ folder and ransom_note.txt file.
 
-Key Finder
+## Key Finder
 
 The key_finder.py script helps in finding the real private key:
 
@@ -92,4 +92,3 @@ License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-You can copy and paste this into your `README.md` file on GitHub. Let me know if you need further adjustments!
