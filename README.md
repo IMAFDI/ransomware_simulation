@@ -5,7 +5,7 @@ This project demonstrates a basic ransomware simulation with encryption and decr
 
 ---
 
-![Encryption Process](https://example.com/encryption_process.png)
+![Encryption Process](https://d8it4huxumps7.cloudfront.net/uploads/images/650a96f7bf772_encryption_vs_decryption_02.jpg)
 
 ## Project Structure
 
@@ -102,7 +102,7 @@ The `key_finder.py` script helps in finding the real private key among several f
 
 ---
 
-![Decryption Process](https://example.com/decryption_process.png)
+![Decryption Process](https://d8it4huxumps7.cloudfront.net/uploads/images/650a96d2732f2_encryption_vs_decryption_03.jpg?d=2000x2000)
 
 ---
 
