@@ -62,12 +62,14 @@ To find the real private key and decrypt files:
    ```bash
    python key_finder.py
    ```
+you have to input the encrypted AES key value from the `ransom_note.txt` the it will tell which is the real key.
 
 2. Run `decryption.py` with the correct private key to decrypt the files:
 
    ```bash
    python decryption.py
    ```
+you have to input the location/directory of that real key which `key_finder.py` have given.
 
    The decryption script will:
    
