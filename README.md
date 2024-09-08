@@ -4,8 +4,14 @@
 This project demonstrates a basic ransomware simulation with encryption and decryption capabilities. The ransomware encrypts files using AES encryption and hides the AES key using RSA encryption. A ransom note is created with a hint to find the real AES key among several fake keys.
 
 ---
-
+### Encryption
 ![Encryption Process](https://d8it4huxumps7.cloudfront.net/uploads/images/650a96f7bf772_encryption_vs_decryption_02.jpg)
+*(The image is taken from unstop )*
+### Decryption
+![Decryption Process](https://d8it4huxumps7.cloudfront.net/uploads/images/650a96d2732f2_encryption_vs_decryption_03.jpg?d=2000x2000) 
+*(The image is taken from unstop )*
+
+---
 
 ## Project Structure
 
@@ -99,10 +105,6 @@ The `decryption.py` script decrypts the files using the following steps:
 ### Key Finder
 
 The `key_finder.py` script helps in finding the real private key among several fake keys by testing each key to find the correct one that can decrypt the AES key in the ransom note.
-
----
-
-![Decryption Process](https://d8it4huxumps7.cloudfront.net/uploads/images/650a96d2732f2_encryption_vs_decryption_03.jpg?d=2000x2000)
 
 ---
 
