@@ -26,9 +26,9 @@ pip install cryptography
 Generate RSA Key Pair and Encrypt Files:
 
 Run encryption.py to encrypt files in the dummy_files directory, create a ransom note, and save the private key for decryption.
-
+```bash
 python encryption.py
-
+```
 Important Files Created:
 
 	•	ransom_note.txt: Contains a hint for finding the real AES key.
@@ -40,15 +40,15 @@ Important Files Created:
 Find the Real Private Key:
 
 Run key_finder.py to identify the real private key from the fake keys. You will need to provide the encrypted AES key from the ransom note.
-
+```bash
 python key_finder.py
-
+```
 Decrypt Files:
 
 After finding the real private key, run decryption.py to decrypt the files. You will need to provide the path to the private key file.
-
+```bash
 python decryption.py
-
+```
 Actions Performed:
 
 	•	Decrypts files in the dummy_files directory.
