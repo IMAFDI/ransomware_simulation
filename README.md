@@ -129,3 +129,4 @@ Feel free to contribute, suggest new features, or report issues. Happy Encryptin
 
 ---
 
+Remember: This project is for educational purposes only. Do not use this knowledge for illegal activities or unauthorized access to systems. Always adhere to ethical guidelines in cybersecurity practices.
